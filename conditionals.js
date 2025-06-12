@@ -2,8 +2,8 @@ let englishButton = document.querySelector(".english-button");
 let ssButton = document.querySelector(".ss-button");
 let mathButton = document.querySelector(".math-button");
 let scienceButton = document.querySelector(".science-button");
-
-
+let englishMessage = document.querySelector(".english-message");
+let mathMessage = document.querySelector(".math-message");
 
 // For each of the test questions:
 //  - Use conditionals to check whether the correct answer was provided by the user. 
@@ -16,7 +16,11 @@ let scienceButton = document.querySelector(".science-button");
 
 englishButton.addEventListener("click", function() {
     let englishInput = document.querySelector(".english").value;
-
+    if (englishInput === "Mon"){
+        console.log("Hello world")
+        englishMessage.innerHTML = "Correct"
+    }
+    else{ englishMessage.innerHTML = "Wrong, try again"}
     // 2. Write an if-else conditional statement.
     //  - Check if the value of the variable englishInput is correct.
     //  - The answer should be "Mon".
@@ -36,6 +40,10 @@ mathButton.addEventListener("click", function() {
     //  - We need to write 'Number' before the grabbed value. 
     let mathInput = Number(document.querySelector(".math").value);
 
+    if(mathInput === 30){
+        mathMessage.innerHTML = "<h1> correct </h1>";
+    }
+    else{ mathMessage.innerHTML = "<h1> wrong </h1>";}
     // 3. Write an if-else conditional statement.
     //  - Check if the value of the variable mathInput is correct.
     //  - The answer should be 30.
